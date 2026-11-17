@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make.fun — live bounties, leaderboards &amp; profiles</title>
+<meta name="description" content="A fast, read-only frontend for make.fun: the live bounty board, bounty pages with rewards and leaderboards, and public account profiles — from the public API alone.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#/"><span class="mark" aria-hidden="true">◆</span> make.fun <span class="brand-sub">bounties</span></a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#/" data-nav="board">Bounties</a>
+      <a href="#/bounty/makefun-frontend-01" data-nav="this">This bounty</a>
+    </nav>
+    <div class="top-search">
+      <input id="q" type="search" placeholder="Search bounties…" aria-label="Search bounties" autocomplete="off">
+    </div>
+  </div>
+</header>
+<main id="app" class="wrap" aria-live="polite"></main>
+<footer class="wrap foot">
+  <p>Live data from make.fun&rsquo;s public API &mdash; read-only, no sign-in, no tracking.
+  A bounty is open while its deadline is in the future; a past-deadline bounty reads closed here even when the API still calls it open.</p>
+</footer>
+</body>
+</html>
